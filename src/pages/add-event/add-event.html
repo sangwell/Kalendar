@@ -1,0 +1,10 @@
+<ion-content padding>
+  <div class="operation-layout">
+    <div><button class="button btn-close" (click)="closeModal()"></button></div>
+    <div><button class="button btn-save" (click)="save()"></button></div>
+  </div>
+  <ion-item>
+    <ion-textarea #eventInput type="text" name="eventText" [(ngModel)]="text" placeholder="输入..."></ion-textarea>
+  </ion-item>
+
+</ion-content>

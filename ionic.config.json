@@ -1,0 +1,7 @@
+{
+  "name": "kalendar",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

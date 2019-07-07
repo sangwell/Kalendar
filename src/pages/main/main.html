@@ -1,0 +1,56 @@
+<ion-content>
+  <div class="container">
+    <div class="wrapper">
+      <div *ngIf="setting.yearSpeed" class="year-speed" [ngStyle]="{'left':yearSpeed+'%'}"></div>
+      <h1 (click)="goToYearPage()">{{nowYearDisplay}}<span></span></h1>
+    </div>
+    <div class="wrapper">
+      <div class="left-wrapper">
+        <h1 (click)="goToMonthPage()">{{nowMonthDisplay}}</h1>
+      </div>
+      <div class="right-wrapper">
+        <div class="reset-btn">
+          <button *ngIf="index!==0" type="button" (click)="goToNowDate()"></button>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="left-wrapper">
+        <h1 (click)="goToDayPage()">
+          {{nowDayDisplay}}
+        </h1>
+      </div>
+      <div class="right-wrapper">
+        <div class="inner-wrapper-left">
+          <button type="button" (click)="selectDayBefore()"></button>
+        </div>
+        <div class="inner-wrapper-right">
+          <button type="button" (click)="selectDayNext()"></button>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="left-wrapper">
+        <div class="slide-layout">
+          <ion-slides [pager]="true"
+                      [initialSlide]="0">
+
+            <ion-slide>
+              <h3 (click)="goToEventListPage()">{{storageLength}}</h3>
+            </ion-slide>
+
+            <ion-slide>
+              <button type="button" class="slide-btn adjust-btn" (click)="switchTheme()"></button>
+              <button type="button" class="slide-btn setting-btn" (click)="goToSettingPage()"></button>
+            </ion-slide>
+
+          </ion-slides>
+        </div>
+      </div>
+      <div class="right-wrapper vertical-center">
+        <button type="button" (click)="addEvent()"></button>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

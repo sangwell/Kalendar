@@ -1,0 +1,34 @@
+page-event-list{
+  .item-ios{
+    padding-left: 0;
+  }
+  .operation-layout{
+    display: flex;
+  }
+  .operation-layout div{
+    flex: 1;
+  }
+  .operation-layout div:nth-child(2){
+    text-align: right;
+  }
+  .operation-layout div button{
+    width: 60px;
+    height: 60px;
+  }
+  .btn-close{
+    background: transparent;
+    background-image: url("../../assets/imgs/no.svg");
+    background-size: 36%;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .btn-layout{
+    width: 70px;
+    position: relative;
+    background: #FFFFFF;
+    background-image: url("../../assets/imgs/finish.svg");
+    background-size: 36%;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}

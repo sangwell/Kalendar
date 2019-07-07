@@ -1,0 +1,16 @@
+<ion-content padding>
+  <div class="operation-layout">
+    <div><button class="button btn-close" (click)="closeModal()"></button></div>
+  </div>
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of eventList;let i = index;">
+      <ion-item>
+        <h3 (click)="edit(item.text, i)">{{item.text}}</h3>
+      </ion-item>
+      <ion-item-options>
+        <button class="btn-layout" (click)="delete(i)"></button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>

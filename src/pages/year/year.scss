@@ -1,0 +1,42 @@
+page-year {
+  .scroll-content {
+    overflow-y: hidden;
+    touch-action: none;
+  }
+  .year-item{
+    color: #afafaf;
+  }
+  .year-selected {
+    color: #000000;
+  }
+  .year-layout {
+    height: 100%;
+    overflow-y: auto;
+  }
+  .year-layout .year-scroll {
+    //padding: 40px 0;
+  }
+  .year-layout h1 {
+    font-size: 90px;
+    height: 33.3%;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: Center;
+  }
+  .slide-zoom {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+  }
+  .slide-zoom div {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    font-size: 72px;
+    justify-content: center;
+    align-items: Center;
+  }
+
+}

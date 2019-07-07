@@ -1,0 +1,17 @@
+<ion-content padding>
+  <ion-slides pager [direction]="'vertical'"
+              [pager]="false"
+              [initialSlide]="initialSlide">
+
+    <ion-slide *ngFor="let item of yearList">
+      <div *ngFor="let year of item"
+           class="year-item"
+           [ngClass]="{'year-selected':year === this.selectedYear}"
+           (click)="selectYear(year)">{{year}}
+      </div>
+    </ion-slide>
+
+  </ion-slides>
+
+
+</ion-content>

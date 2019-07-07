@@ -1,0 +1,42 @@
+<ion-content padding>
+  <div class="year-month-layout">
+    <div>
+      <span>{{selectedYear}}</span>
+      <span class="month-layout">{{selectedMonth}}</span>
+    </div>
+    <div>
+      <button class="main-btn" type="button" (click)="goToMainPage()"></button>
+    </div>
+  </div>
+  <div class="weekday-col">
+    <span>日</span>
+    <span>一</span>
+    <span>二</span>
+    <span>三</span>
+    <span>四</span>
+    <span>五</span>
+    <span>六</span>
+  </div>
+  <div class="weekday-col" *ngFor="let week of monthList;let w = index;"
+       [ngStyle]="{'justify-content':w === 0 ? 'flex-end' : 'flex-start' }">
+    <button type="button" *ngFor="let day of week;let d = index;"
+            [ngClass]="{'day-selected':day.IsSelected,
+            'day-today':day.IsToday}"
+            (click)="selectDay(day.DayIndex)">{{day.DayIndex}}
+    </button>
+  </div>
+  <div class="add-btn-layout">
+    <button type="button" (click)="goToAddEventPage()"></button>
+  </div>
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of eventList;let i = index;">
+      <ion-item>
+        <h3 (click)="edit(item.text, i)">{{item.text}}</h3>
+      </ion-item>
+      <ion-item-options>
+        <button class="btn-layout" (click)="delete(i)"></button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>

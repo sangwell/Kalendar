@@ -1,0 +1,11 @@
+<ion-content>
+  <div class="container">
+    <div class="year-layout">
+      <h1>{{selectedYear}}</h1>
+    </div>
+    <div class="wrapper" *ngFor="let row of monthList">
+      <div *ngFor="let month of row" (click)="goToDayPage(month)">{{month}}</div>
+    </div>
+  </div>
+
+</ion-content>

@@ -1,0 +1,78 @@
+page-day{
+  .scroll-content{
+    touch-action: none;
+  }
+  .year-month-layout{
+    display: flex;
+    padding: 50px 0;
+  }
+  .year-month-layout div{
+    flex: 1;
+    font-size: 32px;
+  }
+  .month-layout{
+    margin-left: 20px;
+  }
+  .year-month-layout div:nth-child(2){
+    text-align: right;
+  }
+  .main-btn{
+    width: 26px;
+    height: 100%;
+    background-color: transparent;
+    background-image: url("../../assets/imgs/main.svg");
+    background-size: auto 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .weekday-col{
+    width: 100%;
+    display: flex;
+  }
+  .weekday-col span{
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .weekday-col button{
+    height: calc((100vw - 32px)/7);
+    width: 14.28%;
+    border-radius: 50%;
+    padding: 0;
+    font-size: 14px;
+    background: transparent;
+    outline: none;
+  }
+  .day-selected{
+    background: #000000!important;
+    color: #FFFFFF!important;
+  }
+  .day-today{
+    color: red;
+  }
+  .add-btn-layout{
+    text-align: right;
+  }
+  .add-btn-layout button{
+    height: 50px;
+    width: 50px;
+    background: #cccccc;
+    border-radius: 50%;
+    background-image: url("../../assets/imgs/addevent.svg");
+    background-size: 36%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-bottom: 10px;
+  }
+  .btn-layout{
+    width: 70px;
+    position: relative;
+    background: #FFFFFF;
+    background-image: url("../../assets/imgs/finish.svg");
+    background-size: 36%;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}

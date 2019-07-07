@@ -1,0 +1,20 @@
+<ion-content padding>
+  <div class="operation-layout">
+    <div><button class="button btn-close" (click)="closeModal()"></button></div>
+  </div>
+  <ion-list>
+    <ion-item (click)="showUpdateVersionConfirm()">
+      版本更新
+      <ion-badge item-end color="danger">1</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>年进度</ion-label>
+      <ion-toggle color="dark" checked="false" [(ngModel)]="setting.yearSpeed" (ionChange)="saveSettings()"></ion-toggle>
+    </ion-item>
+    <!--<ion-item>
+      <ion-label>自动切换风格</ion-label>
+      <ion-toggle color="dark" checked="false"></ion-toggle>
+    </ion-item>-->
+  </ion-list>
+
+</ion-content>

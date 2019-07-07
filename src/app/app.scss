@@ -1,0 +1,81 @@
+// http://ionicframework.com/docs/theming/
+
+// App Global Sass
+$color: #000;
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@font-face {
+  font-family: 'nobel-bold';
+  src: url("../assets/fonts/ufonts.com_nobel-bold-opentype.otf") format('opentype'), url("../assets/fonts/ufonts.com_nobel-bold.ttf") format('truetype'), url("../assets/fonts/ufonts.com_nobel-bold.eot") format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'nobel-bold';
+  color: #000000;
+}
+
+.scroll-content {
+  overflow-y: hidden!important;
+}
+
+ion-backdrop {
+  opacity: 0 !important;
+}
+
+.picker-ios .picker-toolbar {
+  display: none !important;
+}
+
+.picker-ios .picker-wrapper {
+  height: 100% !important;
+  border-top: none !important;
+}
+
+.picker-ios .picker-col {
+  //background: red;
+  height: 100vh;
+}
+
+.picker-columns {
+  height: 100% !important;
+}
+
+.picker-ios .picker-above-highlight {
+  display: none;
+}
+
+.picker-ios .picker-below-highlight {
+  display: none;
+}
+
+.picker-ios .picker-prefix, .picker-ios .picker-suffix, .picker-ios .picker-opts {
+  top: 30%;
+}
+
+.picker-ios .picker-opt {
+  border: 1px solid;
+}
+
+.item-ios {
+  padding-left: 0;
+}
+
+ion-app.ios {
+  //opacity: 0.1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #000000;
+}
